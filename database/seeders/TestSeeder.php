@@ -19,7 +19,7 @@ class TestSeeder extends Seeder
             News::create([
                 'title' => 'This is news title ' . $i,
                 'content' => '<p>Here comes some content u may like</p><a href="https://github.com/XuZhixuan">看看沙雕</a>',
-                'cover' => 'https://www.acgtubao.com/wp-content/uploads/2021/10/yande809410-544x1024.jpg'
+                'cover' => 'https://getwallpapers.com/wallpaper/full/a/4/7/300880.jpg'
             ]);
             Question::create([
                 'question' => $i . ' == ' . $i . '?',

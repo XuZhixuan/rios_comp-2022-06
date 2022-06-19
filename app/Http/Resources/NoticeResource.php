@@ -2,9 +2,7 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\JsonResource;
-
-class NoticeResource extends JsonResource
+class NoticeResource extends Resource
 {
     /**
      * Transform the resource into an array.
@@ -20,6 +18,7 @@ class NoticeResource extends JsonResource
             $this->mergeWhen(!$this->is_collection, [
                 'content' => $this->content
             ]),
+            'type' => $this->type,
             'date' => $this->is_collection ? $this->created_at->toDateString() : $this->created_at->toDateTimeString(),
         ];
     }

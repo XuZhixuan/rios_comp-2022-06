@@ -2,10 +2,9 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Auth;
 
-class QuestionResource extends JsonResource
+class QuestionResource extends Resource
 {
     /**
      * Transform the resource into an array.
