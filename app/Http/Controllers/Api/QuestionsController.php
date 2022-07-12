@@ -36,7 +36,7 @@ class QuestionsController extends Controller
             'question' => 'required'
         ]);
 
-        $question = Question::create($request->all(['question']));
+        $question = Question::create(array_merge($request->all(), ['show' => $request->has('answer')]));
 
         return response(['id' => $question->id], 201);
     }
@@ -59,6 +59,7 @@ class QuestionsController extends Controller
             'question' => $request->question,
             'answer' => $request->answer,
             'weight' => $request->weight,
+            'show' => true
         ]);
 
         return response(null, 204);
